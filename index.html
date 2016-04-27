@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="js/jquery-2.2.2.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/dropzone.js"></script>
+        <script src="js/ynabconverter.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/dropzonejs.css" />
+        <meta name=viewport content="width=device-width,initial-scale=1">
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <p class="navbar-brand">YnabConverter</p>
+                </div>
+            </nav>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="well well-sm">
+                        <div id="dropzone">
+                            <form action="convert.php" class="dropzone needsclick dz-clickable" id="rabobank-upload">
+                                <div class="dz-message needsclick">
+                                    <h1>Convert Rabobank CSV to YNAB</h1>
+                                    <div id="alert_placeholder">
+                                        <div class="alert alert-info" role="alert">
+                                            Drop Rabobank statements export file (.csv) or click here to convert it for Ynab usage.
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
