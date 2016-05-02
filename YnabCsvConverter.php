@@ -115,7 +115,7 @@ class YnabCsvConverter extends stdClass
         $lines[] = implode(',', $this->_getFileHeaders());
         foreach ($transactions as $transaction)
         {
-            $lines[] = implode(',', $transaction);
+            $lines[] = '"' . implode('","', $transaction) . '"';
         }
         return $lines;
     }
