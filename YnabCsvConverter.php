@@ -70,6 +70,9 @@ class YnabCsvConverter extends stdClass
         {
             case "ba": // betaalautomaat
             case "ga": // geldautomaat
+                if ($csv_line[9] == "") {
+                    return $csv_line[10];
+                }
                 return $csv_line[9] . " - " . $csv_line[10];
                 break;
             case "tb": // spaaropdracht?
@@ -80,6 +83,9 @@ class YnabCsvConverter extends stdClass
                 return $csv_line[5] . " - " . $csv_line[6];
                 break;
             default:
+                if ($csv_line[5] == "") {
+                    return $csv_line[10];
+                }
                 return $csv_line[5] . " - " . $csv_line[10];
         }
     }
